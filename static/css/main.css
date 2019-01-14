@@ -1,26 +1,9 @@
 /* Css-styles of icon*/
-/*@font-face {*/
-    /*font-family: Madelina;*/
-    /*src: url("../fonts/noturnal_hand.otf") format("opentype");*/
-/*}*/
 
 .form-control[type='search']:focus, .btn:focus {
     outline: 0 !important;
     border-color: initial;
     box-shadow: none;
-}
-
-.ask-btn {
-    margin-right: 10px;
-}
-
-.ask-btn a, .signup-btn a {
-    color: #fff;
-    font-family: Madelina;
-}
-
-.a-simple, .ask-btn a{
-    text-decoration: none;
 }
 
 .menu-row {
@@ -29,10 +12,6 @@
 
 .date-row {
     padding-top: 20px;
-}
-
-.search-div {
-    margin-right: -15px !important;
 }
 
 .site-footer {
