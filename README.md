@@ -3,8 +3,8 @@
 Это небольшое тестовое задание было создано специально для прохождения тестового этапа на вакансию "Web Developer (стажер)" от компании "TR Logic LLC".
 
 Использованные технологии в проекте:
-Клиентская часть: HTML, CSS, JQuery, Bootstrap4;
-Серверная часть: Django Framework 2.1 (python web framework), sqlite3;
+- Клиентская часть: HTML, CSS, JQuery, Bootstrap4;
+- Серверная часть: Django Framework 2.1 (python web framework), sqlite3;
 
 Django был выбран потому что у него есть встроенные методы безопасности и встроенные фишки которые ускоряют процесс разработки:
 - защита от csrf (Cross-Site Request Forgery)
