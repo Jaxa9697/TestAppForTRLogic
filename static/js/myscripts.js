@@ -59,10 +59,11 @@ jQuery(document).ready(function() {
       event.preventDefault();
       let username = $('#username').val(),
           password = $('#password').val(),
+          csfr = $('input[name="csrfmiddlewaretoken"]').eq(0).val(),
           error = $('.errorLogin').eq(0);
 
       sendPost('/login/' ,
-             { 'username': username, 'password': password },
+             { 'username': username, 'password': password, 'csrfmiddlewaretoken': csfr },
                   error);
   });
 
@@ -71,6 +72,7 @@ jQuery(document).ready(function() {
       event.preventDefault();
       let username = $('#login'),
           email = $('#email'),
+          csfr = $('input[name="csrfmiddlewaretoken"]').eq(0).val(),
           password1 = $('#password1'),
           password2 = $('#password2');
 
@@ -92,7 +94,8 @@ jQuery(document).ready(function() {
                   'username': username.val(),
                   'email': email.val(),
                   'password1': password1.val(),
-                  'password2': password2.val()
+                  'password2': password2.val(),
+                  'csrfmiddlewaretoken': csfr
               },
               function(response) {
                   if (!response.status) {
