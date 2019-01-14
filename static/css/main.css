@@ -1,0 +1,231 @@
+/* Css-styles of icon*/
+/*@font-face {*/
+    /*font-family: Madelina;*/
+    /*src: url("../fonts/noturnal_hand.otf") format("opentype");*/
+/*}*/
+
+.form-control[type='search']:focus, .btn:focus {
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
+}
+
+.ask-btn {
+    margin-right: 10px;
+}
+
+.ask-btn a, .signup-btn a {
+    color: #fff;
+    font-family: Madelina;
+}
+
+.a-simple, .ask-btn a{
+    text-decoration: none;
+}
+
+.menu-row {
+    display: block !important;
+}
+
+.date-row {
+    padding-top: 20px;
+}
+
+.search-div {
+    margin-right: -15px !important;
+}
+
+.site-footer {
+    background-color: #242729;
+    background-size: auto;
+    color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 80px;
+}
+
+.site-footer__content *:not(:first-child) {
+  margin-left: 16px;
+}
+
+.site-footer__content {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0 0 0;
+  line-height: normal;
+}
+
+.author {
+  text-align: center;
+}
+
+.gb__main-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.footer-stick {
+    flex-grow: 1 !important;
+    margin: 20px auto;
+}
+
+.footer-stick,
+.sidebar {
+    padding-right: 0;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.login {
+    width: 450px;
+    margin: 40px auto 15px auto;
+}
+
+.profile-form-title {
+    margin-left: 150px;
+}
+
+.profile-form .card-body {
+    padding: 45px 25px 10px 30px;
+}
+
+.avatar-header {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -50px;
+}
+
+.avatar-upload-icon {
+    width: 100%;
+    border-radius: 70px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.errorLogin, .errorSignup {
+    color: #ba2121;
+    position: absolute;
+    left: 25px;
+    width: 290px;
+}
+
+.login-btn {
+    margin: -15px -5px 0 20px;
+}
+
+.login-btn a {
+    color: #195a50;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.signup-btn {
+    margin: -15px 0 0 0;
+}
+
+.css-1ivoip3 { justify-content: center; }
+.css-1k8tu3j { align-items: center; }
+.css-1cqgl9p { display: flex; }
+
+svg:not(:root) { overflow: hidden; }
+* { box-sizing: border-box; }
+
+.css-r2jepm {
+    height: 180px;
+    width: 100%;
+    max-width: 180px;
+    background-color: white;
+    position: relative;
+    border-radius: 90px;
+    overflow: hidden;
+}
+
+.css-gaq51w {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease 0s;
+    background: rgb(23, 90, 81);
+}
+
+.choose_photo {
+    position: absolute;
+    top: 48px;
+    left: 63px;
+    font-size: 30px;
+    opacity: 0.5;
+}
+
+#avatar {
+    width: 60px;
+}
+
+.login .card-header {
+    background-image: url("/static/img/bg-01.jpg");
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 15px 54px 15px;
+}
+
+.login .card-header:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(54,84,99,0.7);
+}
+
+.login-title {
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.login {
+    width: 630px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pb-15 {
+    padding-bottom: 15px !important;
+}
+
+.errorLogin, .errorSignup {
+    color: #ba2121;
+    position: absolute;
+    left: 50px;
+    width: 370px;
+}

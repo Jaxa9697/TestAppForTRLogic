@@ -1,0 +1,53 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block title %}
+    Login -
+{% endblock %}
+
+{%block content%}
+    <div class="col-9">
+        <div class="card login shadow">
+            <div class="card-header shadow-sm">
+                <span class="login-title">Log In</span>
+            </div>
+            <div class="card-body p-xl-5 pb-15">
+                <form method="post" id="logIn">
+                    <div class="d-table w-100">
+                        <div class="d-table-row">
+                            <div class="d-table-cell pb-xl-4">
+                                <label for="login" class="text-info text-uppercase">
+                                    Email or Login
+                                </label>
+                            </div>
+                            <div class="d-table-cell">
+                                <div class="form-group">
+                                    <input type=text name=username class="form-control"
+                                           id=username placeholder=example@mail.com required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cel pb-xl-5">
+                                <label for="password" class="text-info text-uppercase">Password</label>
+                            </div>
+                            <div class="d-table-cell">
+                                <div class="form-group w-100">
+                                    <input type=password name=password minlength="4" class="form-control"
+                                           id="password" placeholder="********" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <small class="form-text errorLogin"></small>
+                        <button type="submit" class="btn btn-secondary ask-btn w-25 text-uppercase">Log In</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-body">
+                <div class="text-center pb-lg-3">Don't have an account? <a href="/signup">Sign up</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

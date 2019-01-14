@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Profile -
+{% endblock %}
+
+{% block content %}
+    <div class="col-9 margin-top-50">
+        <form id="profileForm" method="post" enctype="multipart/form-data">
+            <div class="card profile-form shadow rounded">
+                <div class="card-header shadow-sm">
+                    <div class="avatar-header shadow">
+                        <img src="{{ user.profile.avatar.url }}" alt="avatar" class="avatar-upload-icon">
+                    </div>
+                    <div class="select-avatar choose_photo">
+                        <div class="custom-file">
+                            <input type="file" accept="image/jpeg,image/x-png" id="avatar"
+                                   class="custom-file-input" name="avatar" aria-describedby="avatar">
+                            <label class="custom-file-label">
+                                <i class="material-icons">local_see</i>
+                            </label>
+                        </div>
+                    </div>
+                    <h3 class="profile-form-title">
+                        {{ user.first_name }} {{ user.last_name }} <i class="small text-info">( {{ user.email }} )</i>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col">
+                            <label for="login" class="text-info text-uppercase small">Login<i class="text-danger">*</i></label>
+                            <div class="form-group">
+                                <input type="text" id="login" class="form-control" required
+                                   name="login" placeholder="User login" value="{{ user.username }}">
+                                <div class="invalid-feedback">This field is required</div>
+                            </div>
+
+                            <label for="email" class="text-info text-uppercase small">Email<i class="text-danger">*</i></label>
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control" name="email"
+                                       readonly value="{{ user.email }}">
+                            </div>
+
+                            <label for="firstName" class="text-info text-uppercase small">First Name</label>
+                            <div class="form-group">
+                                <input type="text" id="firstName" class="form-control"
+                                       name="first_name" placeholder="Steve" value="{{ user.first_name }}">
+                            </div>
+
+                            <label for="lastName" class="text-info text-uppercase small">Last Name</label>
+                            <div class="form-group">
+                                <input type="text" id="lastName" class="form-control"
+                                       name="last_name" placeholder="Jobs" value="{{ user.last_name }}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="about" class="text-info text-uppercase small">About yourself</label>
+                            <div class="form-group">
+                                <textarea id="about" name="about" class="form-control" rows="8"
+                                    placeholder="Tell about yourself shortly">{{ user.profile.about }}</textarea>
+                            </div>
+                            <div>
+                                <div>
+                                    <label class="text-info text-uppercase small">Last login:</label>
+                                    <span class="font-italic small">{{ user.last_login | date:'d-m-Y H:i' }}</span>
+                                </div>
+                                <div>
+                                    <label class="text-info text-uppercase small">Date joined:</label>
+                                    <span class="font-italic small">{{ user.date_joined | date:'d-m-Y H:i' }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="birthday" class="text-info text-uppercase small">Birthday</label>
+                            <div class="form-group input-group date">
+                                <input id="birthday" name="birthday" type="text" class="form-control datetime"
+                                        value="{{ user.profile.birthday | date:'m/d/Y' }}">
+                                <div class="input-group-append input-group-addon">
+                                    <span class="input-group-text">
+                                        <i class="material-icons">event</i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col align-bottom">
+                            <label></label>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-secondary ask-btn w-50">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-3 sidebar margin-top-50">
+        <div class="card shadow">
+            <div class="card-header shadow-sm">
+                <h5>Change password</h5>
+            </div>
+            <div class="card-body">
+                <form method="post" id="changePassword">
+                    <div class="form-group">
+                        <input type="password" name="old_password" required
+                                placeholder="Enter old password" class="form-control">
+                        <div class="invalid-feedback" id="fd-old-password"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="new_password1" required
+                                placeholder="Enter new password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="new_password2" required
+                                placeholder="Repeat new password" class="form-control">
+                        <div class="invalid-feedback" id="fd-new-password">Passwords doesn't match</div>
+                    </div>
+                    <button type="submit" class="btn btn-secondary w-100">Save</button>
+                </form>
+            </div>
+        </div>
+        <div class="card shadow mt-3">
+            <div class="card-body">
+                <a href="/logout/" class="btn-link text-white">
+                    <button type="submit" class="btn btn-secondary w-100">Log Out</button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

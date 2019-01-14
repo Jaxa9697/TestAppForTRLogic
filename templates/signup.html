@@ -1,0 +1,73 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block title %}
+    Sign Up -
+{% endblock %}
+
+{%block content%}
+    <div class="col-9">
+        <div class="card login shadow">
+            <div class="card-header shadow-sm">
+                <span class="login-title">Sign Up</span>
+            </div>
+            <div class="card-body p-xl-5 pb-15">
+                <form method="post" id="signUp">
+                    <div class="d-table w-100">
+                        <div class="d-table-row">
+                            <div class="d-table-cell" style="width: 200px;">
+                                <label for="login" class="text-info text-uppercase">Username</label>
+                            </div>
+                            <div class="d-table-cell">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="login" placeholder="Tester" required minlength=4>
+                                    <div class="invalid-feedback" id="fd-login"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">
+                                <label for="email" class="text-info text-uppercase">Email address</label>
+                            </div>
+                            <div class="d-table-cell">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="example@mail.com" required>
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    <div class="invalid-feedback" id="fd-email"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">
+                                <label for="password1" class="text-info text-uppercase">Password</label>
+                            </div>
+                            <div class="d-table-cell">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password1" placeholder="********" required minlength=8>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">
+                                <label for="password2" class="text-info text-uppercase">Repeat password</label>
+                            </div>
+                            <div class="d-table-cell">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password2" placeholder="********" required minlength=8>
+                                    <div class="invalid-feedback" id="fd-password">Passwords doesn't match!!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <small class="form-text errorSignup"></small>
+                        <button type="submit" class="btn btn-secondary ask-btn w-25">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-body">
+                <div class="text-center pb-lg-3">Already have an account?<a href="/login"> Log In</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
